@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CodeWars4kyu;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using System.Reflection;
+using System;
 
 namespace CodeWarsTest
 {
@@ -12,7 +13,16 @@ namespace CodeWarsTest
 		public class KataTest
 		{
 
-[Test]
+            [Test]
+            public void GettingAlongWithIntegerPartitionsTest()
+            {
+                Assert.AreEqual("Range: 1 Average: 1.50 Median: 1.50", GettingAlongWithIntegerPartitionsTask.Part(2));
+                Assert.AreEqual("Range: 2 Average: 2.00 Median: 2.00", GettingAlongWithIntegerPartitionsTask.Part(3));
+                Assert.AreEqual("Range: 3 Average: 2.50 Median: 2.50", GettingAlongWithIntegerPartitionsTask.Part(4));
+                Assert.AreEqual("Range: 5 Average: 3.50 Median: 3.50", GettingAlongWithIntegerPartitionsTask.Part(5));
+            }
+
+            [Test]
             public static void StringsMixTest()            
             {
                 Assert.AreEqual("2:eeeee/2:yy/=:hh/=:rr", StringsMixTask.Mix("Are they here", "yes, they are here"));
